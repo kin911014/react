@@ -142,4 +142,11 @@ module.exports = {
     "build": "npx webpack",
     "start": "npx webpack-dev-server"
 }
+
+7. 화면 디자인
+
+8. 컴포넌트 작성 + 조합
+
+9. 속성과 상태 파악
+
 ```

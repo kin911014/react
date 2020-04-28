@@ -1,12 +1,13 @@
 import React from 'react';
+import FoodList from './FoodList';
 
-class App extends React.Component {
+export default class App extends React.Component {
     render(){
-        const message = 'React';
     return (
-        <h1>Hello {message}</h1>
+        <div className='App'>
+            <FoodList />
+        </div>
     );
     }
 }
 
-export { App};
