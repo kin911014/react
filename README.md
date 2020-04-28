@@ -118,7 +118,7 @@ module.exports = {
 }
 
 5. babel 설정(babel.config.json)
-~~~
+```
 {
     "presets": [
         [
@@ -135,12 +135,11 @@ module.exports = {
         ],"@babel/preset-react"
     ]
 }
-~~~
+```
 6. npm scripting(package.json, scripts 섹션 수정)
 
-~~
-"scripts": {
+```"scripts": {
     "build": "npx webpack",
     "start": "npx webpack-dev-server"
-  }
-~~
+}
+```
