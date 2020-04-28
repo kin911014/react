@@ -1,6 +1,6 @@
 const App = function(){
     const app = document.createElement('h1');
-    app.textContent = "hello world";
+    app.textContent = "Hello React";
 
     return app;
 }
