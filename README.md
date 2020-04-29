@@ -119,7 +119,7 @@ module.exports = {
 
 5. babel 설정(babel.config.json)
 
-```{
+{
     "presets": [
         [
             "@babel/env",{
@@ -134,7 +134,7 @@ module.exports = {
             }
         ],"@babel/preset-react"
     ]
-}```
+}
 
 6. npm scripting(package.json, scripts 섹션 수정)
 
