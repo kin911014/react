@@ -1,13 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 class App extends React.Component {
     constructor(){
         super(...arguments);
-        this.state = {
-            keyword:'',
-            contents:'',
-            birthYear:1985
-        }
+    }
+
+    onLoginSubmit(event){
+        event.preventDefault();
+        console.log(event.target.email.value + " : " + event.target.password.value)
+
     }
     onInputChanged(event){
         // this.setState({
@@ -31,25 +32,17 @@ class App extends React.Component {
     render(){
     return (
         // Fragment는 하나의 리턴에 두개의 컴포넌트가 들어가면 안되니 묶어주는 역할
-        <Fragment>
+        <form onSubmit={this.onLoginSubmit.bind(this)}>
             
             <div>
-                검색: <input type='text' value={this.state.keyword} onChange={ this.onInputChanged.bind(this)}/>
+                email: <input name='email' type='text' />
             </div>
             <br />
             <div>
-                내용: <textarea value={this.state.contents} onChange={ this.onTextareaChanged.bind(this)}></textarea>
+                password: <input name='password' type='password' />
             </div>
-            <div>
-                생년:
-                <select value={this.state.birthYear} onChange={ this.onSelectChanged.bind(this)} >
-                    <option value='1984'>1984년</option>
-                    <option value='1985'>1985년</option>
-                    <option value='1986'>1986년</option>
-                </select>
-            </div>
-
-        </Fragment>
+            <button type='submit'>login</button>
+        </form>
     );
     }
 }
